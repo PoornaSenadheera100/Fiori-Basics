@@ -42,6 +42,10 @@ function (Controller, MessageToast, Button) {
         },
         closeDialog(){
             this._oDialog.close();
+        },
+        navToCustManage(){
+            var oRouter = this.getRouter();
+            oRouter.navTo("Customers");
         }
     });
 });

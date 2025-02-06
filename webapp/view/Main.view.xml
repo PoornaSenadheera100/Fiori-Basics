@@ -12,6 +12,9 @@
             <Button text="{i18n>btnSampleModelTxt}" press="navToSampleModel"></Button>
             <Button text="{i18n>btnDialogFragTxt}" press="openDialogFrag"></Button>
         </HBox>
+        <HBox>
+            <Button text="{i18n>btnCustManageTxt}" press="navToCustManage"></Button>
+        </HBox>
         <core:Fragment fragmentName="customerappfreestyle.customerappfreestyle.fragment.fragView" type="XML" />
     </Page>
 </mvc:View>

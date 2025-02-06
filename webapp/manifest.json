@@ -107,6 +107,13 @@
                     "target": [
                         "SampleModel"
                     ]
+                },
+                {
+                    "name": "Customers",
+                    "pattern": "Customers",
+                    "target": [
+                        "Customers"
+                    ]
                 }
             ],
             "targets": {
@@ -130,6 +137,13 @@
                     "clearControlAggregation": false,
                     "viewId": "SampleModel",
                     "viewName": "SampleModel"
+                },
+                "Customers": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Customers",
+                    "viewName": "Customers"
                 }
             }
         },
