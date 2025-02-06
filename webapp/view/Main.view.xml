@@ -1,0 +1,17 @@
+<mvc:View controllerName="customerappfreestyle.customerappfreestyle.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <HBox id="hbox1">
+            <Button text="{i18n>btn1txt}" press="pressBtn('Button 1')" type="Accept"/>
+            <Button text="{i18n>btn2txt}" press="pressBtn('Button 2')" type="Reject"/>
+            <Button text="{i18n>btnNavTxt}" press="navigate"/>
+        </HBox>
+        <HBox>
+            <Button text="{i18n>btnSampleModelTxt}" press="navToSampleModel"></Button>
+            <Button text="{i18n>btnDialogFragTxt}" press="openDialogFrag"></Button>
+        </HBox>
+        <core:Fragment fragmentName="customerappfreestyle.customerappfreestyle.fragment.fragView" type="XML" />
+    </Page>
+</mvc:View>

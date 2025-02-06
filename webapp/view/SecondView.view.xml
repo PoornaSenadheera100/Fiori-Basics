@@ -1,0 +1,7 @@
+<mvc:View controllerName="customerappfreestyle.customerappfreestyle.controller.SecondView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="SecondView" title="{i18n>title}">
+       <Text text="This is the second view"></Text>
+    </Page>
+</mvc:View>

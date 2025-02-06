@@ -1,0 +1,11 @@
+<mvc:View controllerName="customerappfreestyle.customerappfreestyle.controller.SampleModel"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="SampleModel" title="{i18n>title}">
+        <Text text="Hi {/employee/firstname} {/employee/lastname},"></Text>
+        <List headerText="Friends" headerLevel="H2" items="{friendsModel>/}" >
+            <StandardListItem title="{friendsModel>firstname} {friendsModel>lastname}" 
+            highlight="{= ${friendsModel>fValue} === 0 ? 'Error' : ${friendsModel>fValue} === 1 ? 'Warning' : 'Success'}"/>
+	    </List>
+    </Page>
+</mvc:View>
