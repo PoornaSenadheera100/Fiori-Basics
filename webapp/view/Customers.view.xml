@@ -3,6 +3,34 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
     <Page id="Customers" title="{i18n>titleCustManage}">
-        <Text text="Customers"></Text>
+        <Table contextualWidth="Auto" id="customers" busyIndicatorDelay="1" items="{path: '/CustomerSet'}">
+            <headerToolbar>
+                <Toolbar>
+                    <Button text="Add" type="Accept" />
+                    <Button text="Edit" type="Attention" />
+                    <Button text="Delete" type="Reject" />
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column width="8em" hAlign="Center">
+                    <Text text="Customer Code"></Text>
+                </Column>
+                <Column width="8em" hAlign="Center">
+                    <Text text="Customer Name"></Text>
+                </Column>
+                <Column width="8em" hAlign="Center">
+                    <Text text="Language"></Text>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem vAlign="Middle">
+                    <cells>
+                        <Text text="{CustCode}"></Text>
+                        <Text text="{CustName}"></Text>
+                        <Text text="{CustMedium}"></Text>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
     </Page>
 </mvc:View>
