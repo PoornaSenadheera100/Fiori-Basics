@@ -80,20 +80,38 @@ function (Controller, Fragment, MessageBox) {
             this.getView().getModel().update(`/CustomerSet(Mandt='${mandt}',CustCode='${custCode}')`, updatedCustomer, {
                 success: (data) => {
                     this._closeDialog();
-                    MessageBox.success('Customer Added Successfully!')
+                    MessageBox.success('Customer Updated Successfully!')
                     this._onRefresh();
                 },
                 error: (error) => {
-                    MessageBox.error('Error occured during adding the customer.')
+                    MessageBox.error('Error occured during updating the customer.')
                 }
             });
         },
+        onDelete(){
+            if(this._cust_model.CustCode){
+                let custCode = this._cust_model.CustCode;
+                let mandt = '100';
+                this.getView().getModel().remove(`/CustomerSet(Mandt='${mandt}',CustCode='${custCode}')`, {
+                    success: (data) => {
+                        MessageBox.success('Customer Deleted Successfully!')
+                        this._onRefresh();
+                    },
+                    error: (error) => {
+                        MessageBox.error('Error occured during deleting the customer.')
+                    }
+                });
+            }
+        },
         closeDialog(){
-            this._closeDialog()
+            this._closeDialog();
+            this.byId("customers").removeSelections(true);
         },
         _closeDialog(){
             if(this._oDialog){
                 this._oDialog.close();
+                this._oDialog.destroy(true);
+                this._oDialog = null;
             }
         },
         _onRefresh(){

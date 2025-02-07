@@ -15,7 +15,7 @@
                 <Toolbar>
                     <Button text="Add" type="Accept" class="sapUiSmallMargin" icon="sap-icon://add" press="onAdd_openCustDialog"/>
                     <Button text="Edit" type="Attention" class="sapUiSmallMargin" icon="sap-icon://edit" press="onEdit_openCustDialog"/>
-                    <Button text="Delete" type="Reject" class="sapUiSmallMargin" icon="sap-icon://delete" />
+                    <Button text="Delete" type="Reject" class="sapUiSmallMargin" icon="sap-icon://delete" press="onDelete"/>
                 </Toolbar>
             </headerToolbar>
             <columns>
