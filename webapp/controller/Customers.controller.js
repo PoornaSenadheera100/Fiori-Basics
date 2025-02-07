@@ -1,12 +1,54 @@
 sap.ui.define([
-    "./App.controller"
+    "./App.controller",
+    "sap/ui/core/Fragment",
+    "sap/m/MessageBox"
 ],
-function (Controller) {
+function (Controller, Fragment, MessageBox) {
     "use strict";
 
     return Controller.extend("customerappfreestyle.customerappfreestyle.controller.Customers", {
         onInit: function () {
-            
+            // this._cust.model = {}
+        },
+        onAdd_openCustDialog: function(){
+            var that = this;
+            if(!this._oDialog){
+                Fragment.load({
+                    name: "customerappfreestyle.customerappfreestyle.fragment.addCustomerDialog",
+                    controller: that
+                }).then(function(oValue){
+                    that._oDialog = oValue;
+                    that.getView().addDependent(that._oDialog);
+                    that._oDialog.open();
+                })
+            }else{
+                that._oDialog.open
+            }
+        },
+        onSave: function(){
+            let customer = {
+                Mandt : '100',
+                CustCode : sap.ui.getCore().byId("CUSTCODE").getValue(),
+                CustName : sap.ui.getCore().byId("CUSTNAME").getValue(),
+                CustMedium : sap.ui.getCore().byId("CUSTMEDIUM").getValue()
+            }
+            this.getView().getModel().create("/CustomerSet", customer, {
+                success: (data) => {
+                    this._closeDialog()
+                    MessageBox.success('Customer Added Successfully!')
+                },
+                error: (error) => {
+                    MessageBox.error('Error occured during adding the customer.')
+                }
+            });
+        },
+        closeDialog(){
+            this._closeDialog()
+        },
+        _closeDialog(){
+            if(this._oDialog){
+                this._oDialog.close();
+            }
         }
     });
 });

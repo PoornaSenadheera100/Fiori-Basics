@@ -3,12 +3,18 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
     <Page id="Customers" title="{i18n>titleCustManage}">
-        <Table contextualWidth="Auto" id="customers" busyIndicatorDelay="1" items="{path: '/CustomerSet'}">
+        <Table contextualWidth="Auto" id="customers" busyIndicatorDelay="1" 
+        items="{
+            path: '/CustomerSet', 
+            sorter: {
+				path: 'CustCode'
+			}
+        }">
             <headerToolbar>
                 <Toolbar>
-                    <Button text="Add" type="Accept" />
-                    <Button text="Edit" type="Attention" />
-                    <Button text="Delete" type="Reject" />
+                    <Button text="Add" type="Accept" class="sapUiSmallMargin" icon="sap-icon://add" press="onAdd_openCustDialog"/>
+                    <Button text="Edit" type="Attention" class="sapUiSmallMargin" icon="sap-icon://edit" />
+                    <Button text="Delete" type="Reject" class="sapUiSmallMargin" icon="sap-icon://delete" />
                 </Toolbar>
             </headerToolbar>
             <columns>

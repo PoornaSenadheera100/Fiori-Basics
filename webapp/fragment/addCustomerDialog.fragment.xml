@@ -1,0 +1,36 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core"
+xmlns:f="sap.ui.layout.form"
+>
+    <Dialog xmlns="sap.m" title="Add Customer">
+        <f:Form id="frm_cust_dataEntry" class="frm_cust_dataEntry" editable="true">
+            <f:layout>
+                <f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="true"/>
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer>
+                    <f:FormElement label="Customer Code">
+                        <f:fields>
+                            <Input id="CUSTCODE" placeholder="Customer Code" value="{CustCode}" required="true" />
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement label="Customer Name">
+                        <f:fields>
+                            <Input id="CUSTNAME" placeholder="Customer Name" value="{CustName}" required="true" />
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement label="Language">
+                        <f:fields>
+                            <Input id="CUSTMEDIUM" placeholder="English" value="{CustMedium}" required="true" />
+                        </f:fields>
+                    </f:FormElement>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+        <buttons>
+            <Button text="Save" press="onSave" type="Accept"/>
+            <Button text="Cancel" press="closeDialog"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>
