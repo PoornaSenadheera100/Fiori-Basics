@@ -18,6 +18,11 @@ function (Controller, JSONModel, BindingMode) {
 
             var friendsModel = [
                 {
+                    firstname: "Ruzna",
+                    lastname: "Rizvi",
+                    fValue: 2
+                },
+                {
                     firstname: "Prabhavi",
                     lastname: "Jayanetti",
                     fValue: 2
