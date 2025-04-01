@@ -40,6 +40,10 @@ function (Controller, MessageToast, Button) {
             this._oDialog.open()
            
         },
+        navToSmartTable(){
+            var oRouter = this.getRouter();
+            oRouter.navTo("SmartTable");
+        },
         closeDialog(){
             this._oDialog.close();
         },
