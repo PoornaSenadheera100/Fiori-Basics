@@ -18,8 +18,8 @@ server:
         backend:
           - scp: true
             path: /sap
-            url: http://altriabtphana.com:50000
-            destination: CFN
+            url: http://20.212.157.185:50000
+            destination: S4HANA-FAA
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
