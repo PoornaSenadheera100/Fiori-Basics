@@ -109,13 +109,6 @@
                     ]
                 },
                 {
-                    "name": "SmartTable",
-                    "pattern": "SmartTable",
-                    "target": [
-                        "SmartTable"
-                    ]
-                },
-                {
                     "name": "Customers",
                     "pattern": "Customers",
                     "target": [
@@ -144,13 +137,6 @@
                     "clearControlAggregation": false,
                     "viewId": "SampleModel",
                     "viewName": "SampleModel"
-                },
-                "SmartTable": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "SmartTable",
-                    "viewName": "SmartTable"
                 },
                 "Customers": {
                     "viewType": "XML",

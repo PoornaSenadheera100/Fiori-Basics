@@ -11,7 +11,6 @@
         <HBox>
             <Button text="{i18n>btnSampleModelTxt}" press="navToSampleModel"></Button>
             <Button text="{i18n>btnDialogFragTxt}" press="openDialogFrag"></Button>
-            <Button text="{i18n>btnSmartTable}" press="openSmartTable"></Button>
         </HBox>
         <HBox>
             <Button text="{i18n>btnCustManageTxt}" press="navToCustManage"></Button>
